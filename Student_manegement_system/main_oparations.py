@@ -83,7 +83,7 @@ class StudentManager:
     # --- ძირითადი ფუნქციონალი ---
 
     def add_student(self):
-        print("\n--- ახალი სტუდენტის დამატება ---")
+        #--- ახალი სტუდენტის დამატება ---
         name = input("შეიყვანეთ სახელი: ").strip()
         
         while True:
@@ -109,7 +109,7 @@ class StudentManager:
         print("✅ სტუდენტი დაემატა და შეინახა!")
 
     def view_all_students(self):
-        print("\n--- ყველა სტუდენტი ---")
+        #--- ყველა სტუდენტი ---
         if not self.students:
             print("სია ცარიელია.")
         else:
