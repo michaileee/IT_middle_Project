@@ -1,4 +1,4 @@
-from validation_operation import get_valid_number, shekreba, gamokleba, gamravleba, gayofa
+from validation_operation import get_valid_number, shekreba, gamokleba, gamravleba, gayofa, get_valid_operation
 
 def kalkulatori():
     print('''   --- კალკულატორი ---
@@ -9,11 +9,10 @@ def kalkulatori():
         num1 = get_valid_number("\nშეიყვანეთ პირველი რიცხვი: ")
         
         # 2. ოპერაციის არჩევა
-        print("აირჩიეთ მოქმედება: +, -, *, /")
-        operacia = input("შეიყვანეთ სიმბოლო: ")
+        operacia = get_valid_operation("\nაირჩიეთ მოქმედება: +, -, *, / : ")
 
         # 3. მეორე რიცხვის მიღება და ვალიდაცია
-        num2 = get_valid_number("შეიყვანეთ მეორე რიცხვი: ")
+        num2 = get_valid_number("\nშეიყვანეთ მეორე რიცხვი: ")
 
         # 4. გამოთვლა
         shedegi = None
@@ -27,7 +26,6 @@ def kalkulatori():
         elif operacia == '/':
             shedegi = gayofa(num1, num2)
         else:
-            print("❌ არასწორი ოპერაცია! გთხოვთ აირჩიოთ: +, -, *, ან /")
             continue # თავიდან იწყებს ციკლს
 
         # შედეგის გამოტანა
