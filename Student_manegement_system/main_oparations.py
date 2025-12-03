@@ -4,7 +4,7 @@ import os
 # ფაილის სახელი
 DATA_FILE = "student_manegement_system/students.json"
 
-# 1. სტუდენტის კლასი სადაც 
+# 1. სტუდენტის კლასი
 class Student:
     def __init__(self, name, roll_number, grade):
         self.__name = name
@@ -41,7 +41,7 @@ class Student:
         }
 
     def __str__(self):
-        return f"-------------\nსახელი: {self.__name}\nსიის ნომერი: {self.__roll_number}\nშეფასება: {self.__grade}\n----------------------------"
+        return f"----------------------------\nსახელი: {self.__name}\nსიის ნომერი: {self.__roll_number}\nშეფასება: {self.__grade}\n----------------------------"
 
 
 # 2. კლასი StudentManager
